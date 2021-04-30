@@ -1,29 +1,5 @@
-/*
-
-=========================================================
-* Neumorphism UI - v1.0.0
-=========================================================
-
-* Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
-* Copyright 2020 Themesberg MIT LICENSE (https://www.themesberg.com/licensing#mit)
-
-* Coded by https://themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
-/*
- * 	Default theme - Owl Carousel CSS File
- */
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
     --blue: #0056B3;
     --indigo: #6610f2;
@@ -21880,7 +21856,7 @@ button.section-slack:focus {
 }
 
 .shadow-soft {
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+    box-shadow: 5px 5px 12px rgba(94, 104, 121, 0.288), -6px -5px 12px #ffffff !important;
 }
 
 .shadow-inset {
