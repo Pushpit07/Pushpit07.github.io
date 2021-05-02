@@ -52,3 +52,9 @@
 		margin: 0 -35px 0 35px;
 	}
 }
+
+.social_btn_link {
+	height: 5rem;
+	width: 5rem;
+	border-radius: 100% !important;
+}
