@@ -2,9 +2,18 @@
 	display: inline-flex !important;
 }
 
+.wrapper_dynamic_small {
+	display: none;
+}
+
 @media (max-width: 1180px) {
 	.wrapper_dynamic {
 		display: none !important;
+	}
+
+	.wrapper_dynamic_small {
+		display: initial !important;
+		padding-bottom: 100px !important;
 	}
 }
 
