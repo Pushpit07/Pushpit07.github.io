@@ -11,7 +11,6 @@
 		<!-- Fontawesome -->
 		<link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
-		<!-- Pixel CSS -->
 		<link type="text/css" href="./css/neumorphism.css" rel="stylesheet" />
 
 		<link type="text/css" href="./css/pushpits_portfolio.css" rel="stylesheet" />
@@ -31,68 +30,47 @@
 					>
 						Home
 					</a>
-					<div class="navbar-collapse" id="navbar_global">
-						<div class="navbar-collapse-header">
-							<div class="row">
-								<div class="col-6 collapse-brand">
+
+					<ul class="navbar-nav navbar-nav-hover align-items-sm-center ml-5 mr-auto">
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link" data-toggle="dropdown">
+								<span class="nav-link-inner-text">Pages</span>
+								<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+							</a>
+							<ul class="dropdown-menu pos_static">
+								<li><a class="dropdown-item" href="./pages/skills.html">Skills</a></li>
+								<li><a class="dropdown-item" href="./pages/tools.html">Tools</a></li>
+								<li><a class="dropdown-item" href="./pages/projects.html">Projects</a></li>
+								<li><a class="dropdown-item" href="./pages/opensource.html">Open Source Projects</a></li>
+								<li><a class="dropdown-item" href="./pages/structure.html">Structure</a></li>
+							</ul>
+						</li>
+						<!--
+
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link" data-toggle="dropdown">
+								<span class="nav-link-inner-text">Components</span>
+								<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
 									<a
-										href="./index.html"
-										class="navbar-brand shadow-soft py-2 px-3 rounded border border-light"
+										class="dropdown-item d-flex align-items-center justify-content-between"
+										href="./components/login_neumorphism.html"
+										target="_blank"
+										>Login & Register <span class="badge badge-dark ml-3">New</span></a
 									>
-										<img src="./assets/img/brand/dark.svg" alt="Themesberg logo" />
-									</a>
-								</div>
-								<div class="col-6 collapse-close">
-									<a
-										href="#navbar_global"
-										class="fas fa-times"
-										data-toggle="collapse"
-										data-target="#navbar_global"
-										aria-controls="navbar_global"
-										aria-expanded="false"
-										title="close"
-										aria-label="Toggle navigation"
-									></a>
-								</div>
-							</div>
-						</div>
-						<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link" data-toggle="dropdown">
-									<span class="nav-link-inner-text">Pages</span>
-									<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="./pages/skills.html">Skills</a></li>
-									<li><a class="dropdown-item" href="./pages/tools.html">Tools</a></li>
-									<li><a class="dropdown-item" href="./pages/projects.html">Projects</a></li>
-									<li><a class="dropdown-item" href="./pages/opensource.html">Open Source Projects</a></li>
-									<li><a class="dropdown-item" href="./pages/structure.html">Structure</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link" data-toggle="dropdown">
-									<span class="nav-link-inner-text">Components</span>
-									<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a
-											class="dropdown-item d-flex align-items-center justify-content-between"
-											href="./components/login_neumorphism.html"
-											target="_blank"
-											>Login & Register <span class="badge badge-dark ml-3">New</span></a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="./components/tables.html"
-											>Tables</a
-										>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+								</li>
+								<li>
+									<a class="dropdown-item" href="./components/tables.html"
+										>Tables</a
+									>
+								</li>
+							</ul>
+						</li> 
+
+						-->
+					</ul>
 				</div>
 			</nav>
 		</header>
@@ -100,9 +78,9 @@
 			<!-- Hero -->
 			<section class="section section bg-soft pb-5 overflow-hidden z-2 mt-5">
 				<div class="container z-2 mt-5">
-					<div class="row mt-5 justify-content-end mr-6">
+					<div class="row mt-5 justify-content-end mr-6 img_small_screen_box">
 						<div
-								class="profile-image bg-primary shadow-inset border border-light rounded-circle p-3 ml-3 mt-n5"
+								class="profile-image bg-primary shadow-inset border border-light rounded-circle p-3 ml-3 mr-1"
 							>
 							<img
 								src="./assets/me2.jpeg"
@@ -114,7 +92,7 @@
 							/>
 						</div>
 					</div>
-					<div class="row justify-content-center text-center">
+					<div class="row justify-content-center text-center info_box_small_screen">
 						<div class="col-lg-8 col-xl-8">
 							<h1 class="display-2 mb-3">Hey! My name is Pushpit</h1>
 							<div class="wrapper_dynamic ml-3 mb-5">
@@ -130,12 +108,10 @@
 							<h1 class="display-2 wrapper_dynamic_small ml-3 mb-8">I'm a Developer</h1>
 						
 
-							<div class="row mt-3 mb-5">
+							<div class="row mt-4 mb-5 quote_small_screen">
 								<div class="col-md-12 mb-5">
 									<blockquote class="blockquote text-center mt-5">
-										"Successful people wake up at 4 am not because they are successful, <br /> they are successful
-										because they wake up at 4 am."
-										<footer class="blockquote-footer mt-3 text-dark">Pushpit Bhardwaj</footer>
+										"Always work on 2 projects at the same time, so that you can procrastinate on one while working on the other."
 									</blockquote>
 								</div>
 							</div>
@@ -203,7 +179,7 @@
 
 										<p class="mt-5">
 											<p class="h5">GOETHE INSTITUT INDIEN</p>
-											<p>German Level B2 Candidate, <i>Pursuing</i></p>
+											<p>German Level B2.2 Candidate, <i>Pursuing</i></p>
 										</p>
 									</div>
 									<div class="ml-2 mt-6">
@@ -214,6 +190,84 @@
 											<div class="col-12 col-md-10 col-lg-10">
 												<!--Accordion-->
 												<div class="accordion shadow-soft rounded">
+													<div class="card card-sm card-body bg-primary border-light mb-0">
+														<a
+															href="#panel-5"
+															data-target="#panel-5"
+															class="accordion-panel-header"
+															data-toggle="collapse"
+															role="button"
+															aria-expanded="false"
+															aria-controls="panel-5"
+														>
+															<span class="icon-title h6 mb-0 font-weight-bold"
+																><span class="mr-4">Computer Science for Web Programming</span>
+																<span class="card-text small"
+																	><span class="far fa-calendar-alt mr-2"></span>June 2021</span
+																></span
+															>
+															<span class="icon"><span class="fas fa-plus"></span></span>
+														</a>
+														<div class="collapse" id="panel-5">
+															<div class="pt-3">
+																<p class="mb-0">
+																	Two course program by Harvard University on edX covering Python, SQL, Git, Django, JavaScript, React JS, Testing, CI/CD, Scalability, and Security.
+																</p>
+															</div>
+														</div>
+													</div>
+													<div class="card card-sm card-body bg-primary border-light mb-0">
+														<a
+															href="#panel-6"
+															data-target="#panel-6"
+															class="accordion-panel-header"
+															data-toggle="collapse"
+															role="button"
+															aria-expanded="false"
+															aria-controls="panel-6"
+														>
+															<span class="icon-title h6 mb-0 font-weight-bold"
+																><span class="mr-4">Data Structures and Algorithms</span>
+																<span class="card-text small"
+																	><span class="far fa-calendar-alt mr-2"></span>July 2021</span
+																></span
+															>
+															<span class="icon"><span class="fas fa-plus"></span></span>
+														</a>
+														<div class="collapse" id="panel-6">
+															<div class="pt-3">
+																<p class="mb-0">
+																	Course by GeeksforGeeks where I mastered data structures and algorithms ranging from bit magic & hashing to complex greedy & dynamic programming concepts.
+																</p>
+															</div>
+														</div>
+													</div>
+													<div class="card card-sm card-body bg-primary border-light mb-0">
+														<a
+															href="#panel-7"
+															data-target="#panel-7"
+															class="accordion-panel-header"
+															data-toggle="collapse"
+															role="button"
+															aria-expanded="false"
+															aria-controls="panel-7"
+														>
+															<span class="icon-title h6 mb-0 font-weight-bold"
+																><span class="mr-4">Blockchain Specialization</span>
+																<span class="card-text small"
+																	><span class="far fa-calendar-alt mr-2"></span>June 2021</span
+																></span
+															>
+															<span class="icon"><span class="fas fa-plus"></span></span>
+														</a>
+														<div class="collapse" id="panel-7">
+															<div class="pt-3">
+																<p class="mb-0">
+																	Four course specialization covering smart contracts, cryptography, solidity, truffle, ipfs, and decentralized applications.
+																</p>
+															</div>
+														</div>
+													</div>
 													<div class="card card-sm card-body bg-primary border-light mb-0">
 														<a
 															href="#panel-1"
@@ -339,15 +393,78 @@
 
 									<div class="ml-2 mt-6">
 										<h2 class="mb-4 mt-3 font-weight-bold">Experience</h2>
+
+										<p class="mt-5">
+											<p class="h3"><span>
+											 <a href="https://theyoganta.com" class="text-dark mr-1" target="_blank">
+												<span><span class="fas fa-link"></span></span>
+												Yoganta
+											</a>
+											 &nbsp;<span class="h6 mr-4">(Software Developer Intern)</span><span class="h5"><span class="card-text small"
+												><span class="far fa-calendar-alt mr-2"></span>Jun 2021 - July 2021
+												</span> </span> </span>
+											
+										</p>
+										<div class="row mb-3">
+											<div class="col-lg-10">
+												<a href="#" class="badge badge-md badge-dark">React</a>
+												<a href="#" class="badge badge-md badge-dark">Node</a>
+												<a href="#" class="badge badge-md badge-dark">Express</a>
+												<a href="#" class="badge badge-md badge-dark">MongoDB</a>
+												<a href="#" class="badge badge-md badge-dark">Gatsby</a>
+											</div>
+										</div>
+											<p>Worked primarily on the MERN Stack to build a progressive web app and with other technologies such as Gatsby and Material UI.
+											</p>
+										</p>
+
+										<p class="mt-5">
+											<p class="h3"><span>
+											 <a href="https://www.infernoinfosec.in/" class="text-dark mr-1" target="_blank">
+												<span><span class="fas fa-link"></span></span>
+												Inferno Infosec
+											</a>
+											 &nbsp;<span class="h6 mr-4">(OSINT Intern)</span><span class="h5"><span class="card-text small"
+												><span class="far fa-calendar-alt mr-2"></span>Jun 2021 - July 2021
+												</span> </span> </span>
+											
+										</p>
+											<p>Collected & analysed data from the Daily Discussions thread on Reddit subdomain /r/wallstreetbets to study stock market sentiment. Also, had hands on experience with several OSINT tools like shodan and scancode.
+											</p>
+										</p>
+
+										<p class="mt-5">
+											<p class="h3"><span>
+											 <a href="https://thesparksfoundationsingapore.org/" class="text-dark mr-1" target="_blank">
+												<span><span class="fas fa-link"></span></span>
+												The Sparks Foundation
+											</a>
+											 &nbsp;<span class="h6 mr-4">(Web Development Intern)</span><span class="h5"><span class="card-text small"
+												><span class="far fa-calendar-alt mr-2"></span>May 2021 - Jun 2021
+												</span> </span> </span>
+											
+										</p>
+										<div class="row mb-3">
+											<div class="col-lg-10">
+												<a href="#" class="badge badge-md badge-dark">CI/CD</a>
+												<a href="#" class="badge badge-md badge-dark">Cloud Computing</a>
+												<a href="#" class="badge badge-md badge-dark">AWS</a>
+												<a href="#" class="badge badge-md badge-dark">Docker</a>
+												<a href="#" class="badge badge-md badge-dark">Kubernetes</a>
+											</div>
+										</div>
+											<p>Worked in the CI/CD: Cloud Computing department. Deployed applications to AWS and also used Docker & Kubernetes for scaling
+											</p>
+										</p>
 										
 										<p class="mt-5">
 											<p class="h3"><span>
-											 <a href="https://mrktdb.com" class="text-dark mr-1">
+											 <a href="http://mrktdb.com" class="text-dark mr-1" target="_blank">
 												<span><span class="fas fa-link"></span></span>
 												MrktDB
 											</a>
 											 &nbsp;<span class="h6 mr-4">(Full Stack Developer and DevOps Engineer)</span><span class="h5"><span class="card-text small"
-												><span class="far fa-calendar-alt mr-2"></span>Jun 2020 - Present
+												><span class="far fa-calendar-alt mr-2"></span>Jun 2020 - April 2021
 												</span> </span> </span>
 											
 										</p>
@@ -560,6 +677,8 @@
 										<li data-target="#Carousel3" data-slide-to="9"></li>
 										<li data-target="#Carousel3" data-slide-to="10"></li>
 										<li data-target="#Carousel3" data-slide-to="11"></li>
+										<li data-target="#Carousel3" data-slide-to="12"></li>
+										<li data-target="#Carousel3" data-slide-to="13"></li>
 									</ol>
 									<div class="carousel-inner rounded">
 										<div class="carousel-item active">
@@ -579,7 +698,21 @@
 										<div class="carousel-item">
 											<img
 												class="d-block w-100"
+												src="./assets/projects/beatShare.png"
+												alt="Third slide"
+											/>
+										</div>
+										<div class="carousel-item">
+											<img
+												class="d-block w-100"
 												src="./assets/projects/devote.png"
+												alt="Third slide"
+											/>
+										</div>
+										<div class="carousel-item">
+											<img
+												class="d-block w-100"
+												src="./assets/projects/polyharmony.png"
 												alt="Third slide"
 											/>
 										</div>

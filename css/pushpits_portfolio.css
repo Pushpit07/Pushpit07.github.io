@@ -67,3 +67,21 @@
 	width: 5rem;
 	border-radius: 100% !important;
 }
+
+.pos_static {
+	position: absolute !important;
+}
+
+@media (max-width: 500px) {
+	.img_small_screen_box {
+		margin-top: 40px !important;
+	}
+
+	.info_box_small_screen {
+		margin-top: 45px !important;
+	}
+
+	.quote_small_screen {
+		margin-top: 100px !important;
+	}
+}

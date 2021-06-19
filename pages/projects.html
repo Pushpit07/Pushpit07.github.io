@@ -35,67 +35,24 @@
 					>
 						Home
 					</a>
-					<div class="navbar-collapse" id="navbar_global">
-						<div class="navbar-collapse-header">
-							<div class="row">
-								<div class="col-6 collapse-brand">
-									<a
-										href="../index.html"
-										class="navbar-brand shadow-soft py-2 px-3 rounded border border-light"
-									>
-										<img src="./assets/img/brand/dark.svg" alt="Themesberg logo" />
-									</a>
-								</div>
-								<div class="col-6 collapse-close">
-									<a
-										href="#navbar_global"
-										class="fas fa-times"
-										data-toggle="collapse"
-										data-target="#navbar_global"
-										aria-controls="navbar_global"
-										aria-expanded="false"
-										title="close"
-										aria-label="Toggle navigation"
-									></a>
-								</div>
-							</div>
-						</div>
-						<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link" data-toggle="dropdown">
-									<span class="nav-link-inner-text">Pages</span>
-									<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="./skills.html">Skills</a></li>
-									<li><a class="dropdown-item" href="./tools.html">Tools</a></li>
-									<li><a class="dropdown-item" href="./projects.html">Projects</a></li>
-									<li>
-										<a class="dropdown-item" href="./opensource.html">Open Source Projects</a>
-									</li>
-									<li><a class="dropdown-item" href="./structure.html">Structure</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link" data-toggle="dropdown">
-									<span class="nav-link-inner-text">Components</span>
-									<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a
-											class="dropdown-item d-flex align-items-center justify-content-between"
-											href="../components/login_neumorphism.html"
-											>Login & Register <span class="badge badge-dark ml-3">New</span></a
-										>
-									</li>
-									<li>
-										<a class="dropdown-item" href="../components/tables.html">Tables</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+
+					<ul class="navbar-nav navbar-nav-hover align-items-sm-center ml-5 mr-auto">
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link" data-toggle="dropdown">
+								<span class="nav-link-inner-text">Pages</span>
+								<span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+							</a>
+							<ul class="dropdown-menu pos_static">
+								<li><a class="dropdown-item" href="./skills.html">Skills</a></li>
+								<li><a class="dropdown-item" href="./tools.html">Tools</a></li>
+								<li><a class="dropdown-item" href="./projects.html">Projects</a></li>
+								<li>
+									<a class="dropdown-item" href="./opensource.html">Open Source Projects</a>
+								</li>
+								<li><a class="dropdown-item" href="./structure.html">Structure</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		</header>
@@ -109,7 +66,71 @@
 						</div>
 					</div>
 					<!-- End of title-->
+
 					<div class="row mb-5">
+						<div class="col-12 col-md-6 col-lg-4 mb-5">
+							<div class="card bg-primary border-light shadow-soft">
+								<div class="card-header p-3">
+									<img
+										src="../assets/projects/beatShare.png"
+										class="card-img-top rounded"
+										alt="BeatShare"
+									/>
+								</div>
+								<div class="card-body pt-2">
+									<div class="media d-flex align-items-center justify-content-between">
+										<div class="post-group">
+											<a
+												href="#"
+												data-toggle="tooltip"
+												data-placement="top"
+												title=""
+												data-original-title="500+ followers"
+											>
+												<img
+													class="avatar-sm mr-2 img-fluid rounded-circle"
+													src="../assets/me1.png"
+													alt="portrait"
+												/>
+												Pushpit
+											</a>
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="small"
+												><span class="far fa-calendar-alt mr-2"></span>April-July 2021</span
+											>
+										</div>
+									</div>
+									<h3 class="h5 card-title mt-4">BeatShare</h3>
+									<p class="card-text">
+										Beat Share is a platform to collaboratively listen music with your
+										friends/family. A host creates a room and any number of members can join it with
+										the Room Code. Each member in the room can play/pause the current song and even
+										skip it, though some terms and conditions apply. The host sets up play/pause &
+										skip controls while creating the room and can update the room settings later if
+										needed.
+									</p>
+
+									<a
+										href="https://github.com/Pushpit07/BeatShare"
+										target="_blank"
+										class="btn btn-github mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-github-alt"></span></span>View on
+										Github</a
+									>
+									<a
+										href="https://youtu.be/-B_bQyh_juY"
+										target="_blank"
+										class="btn btn-youtube mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-youtube"></span></span>View on
+										YouTube</a
+									>
+									<a href="http://beatshare.in" target="_blank" class="btn btn-github mt-2 mb-3"
+										>View the website</a
+									>
+								</div>
+							</div>
+						</div>
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -139,7 +160,7 @@
 										</div>
 										<div class="d-flex align-items-center">
 											<span class="small"
-												><span class="far fa-calendar-alt mr-2"></span>June 2021</span
+												><span class="far fa-calendar-alt mr-2"></span>May-June 2021</span
 											>
 										</div>
 									</div>
@@ -171,6 +192,130 @@
 										target="_blank"
 										class="btn btn-github mt-2 mb-3"
 										>View the website</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 mb-5">
+							<div class="card bg-primary border-light shadow-soft">
+								<div class="card-header p-3">
+									<img
+										src="../assets/projects/polyharmony.png"
+										class="card-img-top rounded"
+										alt="PolyHarmony"
+									/>
+								</div>
+								<div class="card-body pt-2">
+									<div class="media d-flex align-items-center justify-content-between">
+										<div class="post-group">
+											<a
+												href="#"
+												data-toggle="tooltip"
+												data-placement="top"
+												title=""
+												data-original-title="500+ followers"
+											>
+												<img
+													class="avatar-sm mr-2 img-fluid rounded-circle"
+													src="../assets/me1.png"
+													alt="portrait"
+												/>
+												Pushpit
+											</a>
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="small"
+												><span class="far fa-calendar-alt mr-2"></span>April-June 2021</span
+											>
+										</div>
+									</div>
+									<h3 class="h5 card-title mt-4">PolyHarmony</h3>
+									<p class="card-text">
+										PolyHarmony is a platform created for musicians that helps in deriving chords in
+										possible scales after taking an input of musical notes. In essence, harmony
+										makes this task of figuring out chords for a particular melody easier and less
+										time consuming.
+									</p>
+
+									<a
+										href="https://github.com/Pushpit07/PolyHarmony"
+										target="_blank"
+										class="btn btn-github mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-github-alt"></span></span>View on
+										Github</a
+									>
+									<a
+										href="https://www.youtube.com/watch?v=PzxeoUs9KFI"
+										target="_blank"
+										class="btn btn-youtube mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-youtube"></span></span>View on
+										YouTube</a
+									>
+									<a href="http://polyharmony.in" target="_blank" class="btn btn-github mt-2 mb-3"
+										>View the website</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb-5">
+						<div class="col-12 col-md-6 col-lg-4 mb-5">
+							<div class="card bg-primary border-light shadow-soft">
+								<div class="card-header p-3">
+									<img
+										src="../assets/projects/finearts.png"
+										class="card-img-top rounded"
+										alt="FineArts"
+									/>
+								</div>
+								<div class="card-body pt-2">
+									<div class="media d-flex align-items-center justify-content-between">
+										<div class="post-group">
+											<a
+												href="#"
+												data-toggle="tooltip"
+												data-placement="top"
+												title=""
+												data-original-title="500+ followers"
+											>
+												<img
+													class="avatar-sm mr-2 img-fluid rounded-circle"
+													src="../assets/me1.png"
+													alt="portrait"
+												/>
+												Pushpit
+											</a>
+										</div>
+										<div class="d-flex align-items-center">
+											<span class="small"
+												><span class="far fa-calendar-alt mr-2"></span>May 2021</span
+											>
+										</div>
+									</div>
+									<h3 class="h5 card-title mt-4">FineArts</h3>
+									<p class="card-text">
+										A decentralised platform where creators can get value for their content. They
+										can post stuff while preserving their privacy and anonymity. So, only the
+										content matters! Creators can post their images, songs, and videos. People can
+										tip content based on whether they like it or not. The content appear based on
+										the highest number of tips first. So, the system guarantees that the best
+										content will be shown first and probably get tipped more.
+									</p>
+
+									<a
+										href="https://github.com/Pushpit07/FineArts"
+										target="_blank"
+										class="btn btn-github mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-github-alt"></span></span>View on
+										Github</a
+									>
+									<a
+										href="https://www.youtube.com/watch?v=mJ-Z5l91ziM"
+										target="_blank"
+										class="btn btn-youtube mt-2 mb-3"
+										><span class="mr-2"><span class="fab fa-youtube"></span></span>View on
+										YouTube</a
 									>
 								</div>
 							</div>
@@ -237,69 +382,6 @@
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
 									<img
-										src="../assets/projects/finearts.png"
-										class="card-img-top rounded"
-										alt="FineArts"
-									/>
-								</div>
-								<div class="card-body pt-2">
-									<div class="media d-flex align-items-center justify-content-between">
-										<div class="post-group">
-											<a
-												href="#"
-												data-toggle="tooltip"
-												data-placement="top"
-												title=""
-												data-original-title="500+ followers"
-											>
-												<img
-													class="avatar-sm mr-2 img-fluid rounded-circle"
-													src="../assets/me1.png"
-													alt="portrait"
-												/>
-												Pushpit
-											</a>
-										</div>
-										<div class="d-flex align-items-center">
-											<span class="small"
-												><span class="far fa-calendar-alt mr-2"></span>May 2021</span
-											>
-										</div>
-									</div>
-									<h3 class="h5 card-title mt-4">FineArts</h3>
-									<p class="card-text">
-										A decentralised platform where creators can get value for their content. They
-										can post stuff while preserving their privacy and anonymity. So, only the
-										content matters! Creators can post their images, songs, and videos. People can
-										tip content based on whether they like it or not. The content appear based on
-										the highest number of tips first. So, the system guarantees that the best
-										content will be shown first and probably get tipped more.
-									</p>
-
-									<a
-										href="https://github.com/Pushpit07/FineArts"
-										target="_blank"
-										class="btn btn-github mt-2 mb-3"
-										><span class="mr-2"><span class="fab fa-github-alt"></span></span>View on
-										Github</a
-									>
-									<a
-										href="https://www.youtube.com/watch?v=mJ-Z5l91ziM"
-										target="_blank"
-										class="btn btn-youtube mt-2 mb-3"
-										><span class="mr-2"><span class="fab fa-youtube"></span></span>View on
-										YouTube</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row mb-5">
-						<div class="col-12 col-md-6 col-lg-4 mb-5">
-							<div class="card bg-primary border-light shadow-soft">
-								<div class="card-header p-3">
-									<img
 										src="../assets/projects/anonyverse.png"
 										class="card-img-top rounded"
 										alt="AnonyVerse"
@@ -355,6 +437,9 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -468,9 +553,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -521,6 +603,9 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -642,9 +727,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -708,6 +790,9 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
@@ -820,9 +905,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="row mb-5">
 						<div class="col-12 col-md-6 col-lg-4 mb-5">
 							<div class="card bg-primary border-light shadow-soft">
 								<div class="card-header p-3">
