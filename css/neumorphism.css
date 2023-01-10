@@ -142,7 +142,7 @@ dd {
 
 blockquote {
     margin: 0 0 1rem;
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 
 b,
@@ -6103,6 +6103,14 @@ input[type="button"].btn-block {
     display: block;
 }
 
+.header-global {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar {
     position: relative;
     display: flex;
@@ -6110,6 +6118,9 @@ input[type="button"].btn-block {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
+    border-radius: 50px !important;
+    width: 90vw !important;
+    margin: 0 auto !important;
 }
 
 .navbar > .container,
@@ -6136,15 +6147,18 @@ input[type="button"].btn-block {
 
 .navbar-nav {
     display: flex;
-    flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-nav .dropdown-menu {
