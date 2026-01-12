@@ -1,3 +1,3 @@
-# Pushpit07.github.io
+# Portfolio
 
 A personal portfolio
