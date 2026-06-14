@@ -98,6 +98,11 @@
 	background-color: #f0e6e8 !important;
 }
 
+.card-startup-exited {
+	border-left: 4px solid var(--info) !important;
+	background-color: #e4e7f1 !important;
+}
+
 .why-failed-toggle {
 	cursor: pointer;
 }
@@ -111,6 +116,24 @@
 }
 
 .why-failed-toggle[aria-expanded="true"] .fa-angle-down {
+	transform: rotate(180deg);
+}
+
+.tech-toggle {
+	cursor: pointer;
+	color: var(--gray);
+}
+
+.tech-toggle:hover {
+	text-decoration: underline;
+	color: var(--gray);
+}
+
+.tech-toggle .fa-angle-down {
+	transition: transform 0.2s ease;
+}
+
+.tech-toggle[aria-expanded="true"] .fa-angle-down {
 	transform: rotate(180deg);
 }
 
