@@ -17,18 +17,19 @@
 			   1rem = 1 slide pt, scaled to fit the viewport. All coordinates below are
 			   measured from the original deck's PDF. */
 			:root {
-				--bg: #141210;
-				--card: #2e2b28;
-				--panel: #33302c;
-				--pink: #f2968f;
-				--coral: #f4665c;
-				--yellow: #efc465;
-				--cream: #f6efe4;
-				--peach: #f5b3ad;
-				--maroon: #650b0b;
-				--darkred: #4a0505;
-				--text: #e8e4dd;
-				--muted: #b8b3aa;
+				--bg: #0c0c0c;
+				--card: #141414;
+				--panel: #141414;
+				--line: rgba(255, 255, 255, 0.12);
+				--pink: #f2f2f2;
+				--coral: #c9c9c9;
+				--yellow: #f2f2f2;
+				--cream: #f2f2f2;
+				--peach: #bdbdbd;
+				--maroon: #0c0c0c;
+				--darkred: #0c0c0c;
+				--text: #e4e4e4;
+				--muted: #9a9a9a;
 			}
 			* {
 				margin: 0;
@@ -40,7 +41,7 @@
 				scroll-behavior: smooth;
 			}
 			body {
-				background: #0a0908;
+				background: #000;
 				font-family: "Inter", -apple-system, sans-serif;
 				scroll-snap-type: y mandatory;
 			}
@@ -94,46 +95,34 @@
 				color: var(--muted);
 			}
 			.card {
-				background: var(--card);
-				border-radius: 12rem;
+				background: var(--panel);
+				border: 1rem solid var(--line);
+				border-radius: 6rem;
 			}
 			.tag {
 				display: inline-block;
 				font-family: "Plus Jakarta Sans", sans-serif;
 				font-weight: 600;
-				font-size: 10rem;
+				font-size: 7.5rem;
 				line-height: 1;
-				padding: 5rem 12rem;
-				border-radius: 999rem;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: #8f8f8f;
 			}
-			.tag.dark {
-				background: var(--card);
-				color: var(--yellow);
-			}
-			.tag.red {
-				background: #b8332a;
-				color: var(--cream);
-			}
-			.tag.coral {
-				background: var(--coral);
-				color: var(--cream);
-			}
-			.tag.yellow {
-				background: var(--yellow);
-				color: #3a2c00;
-			}
-			.tag.peach {
-				background: var(--peach);
-				color: #5c1a14;
-			}
-			.tag.darkred {
-				background: #8f1414;
-				color: var(--cream);
+			.tag::before {
+				content: "";
+				display: inline-block;
+				width: 4.5rem;
+				height: 4.5rem;
+				background: #f2f2f2;
+				margin-right: 7rem;
+				vertical-align: 7%;
 			}
 			img.photo {
 				position: absolute;
 				object-fit: cover;
-				border-radius: 12rem;
+				border-radius: 5rem;
+				filter: grayscale(1) contrast(1.04);
 			}
 			ul {
 				list-style: none;
@@ -146,11 +135,13 @@
 				margin-bottom: 9.9rem;
 			}
 			li::before {
-				content: "●";
+				content: "";
 				position: absolute;
 				left: 9.5rem;
-				font-size: 8.5rem;
-				top: 2.5rem;
+				top: 4.5rem;
+				width: 5rem;
+				height: 5rem;
+				background: #d9d9d9;
 			}
 			li.coral::before {
 				color: var(--coral);
@@ -159,20 +150,19 @@
 				color: var(--yellow);
 			}
 			li strong {
-				color: var(--yellow);
-				font-weight: 700;
+				color: var(--cream);
+				font-weight: 600;
 			}
 
 			/* startup cards (slides 2-3) */
 			.scard {
 				position: absolute;
-				background: linear-gradient(180deg, #211e1b 0%, #171513 100%);
-				border: 0.8rem solid rgba(246, 239, 228, 0.09);
-				border-radius: 11rem;
+				background: #101010;
+				border: 1rem solid var(--line);
+				border-radius: 6rem;
 				overflow: hidden;
 				display: flex;
 				flex-direction: column;
-				box-shadow: 0 5rem 16rem rgba(0, 0, 0, 0.45);
 			}
 			.scard .sbanner {
 				position: relative;
@@ -238,7 +228,7 @@
 			}
 			.status {
 				flex-shrink: 0;
-				font-size: 5.8rem;
+				font-size: 5.2rem;
 				font-weight: 600;
 				letter-spacing: 0.09em;
 				text-transform: uppercase;
@@ -248,23 +238,23 @@
 			}
 			.status.shutdown {
 				color: #f5a9a3;
-				background: rgba(229, 72, 77, 0.32);
+				background: #47191b;
 				border-color: rgba(240, 147, 140, 0.4);
 			}
 			/* was profitable, then wound down */
 			.status.mixed {
 				color: #b3c4f5;
-				background: rgba(61, 99, 221, 0.34);
+				background: #1d2a55;
 				border-color: rgba(157, 180, 240, 0.42);
 			}
 			.status.profitable,
 			.status.active {
 				color: #96dcb4;
-				background: rgba(47, 158, 104, 0.32);
+				background: #17402a;
 				border-color: rgba(127, 208, 160, 0.4);
 			}
 			.scard .desc {
-				color: #b5aea5;
+				color: #9a9a9a;
 				font-size: 6.6rem;
 				line-height: 9.2rem;
 				letter-spacing: 0.004em;
@@ -274,28 +264,26 @@
 			.numrow {
 				position: absolute;
 				left: 60rem;
-				width: 638rem;
+				width: 600rem;
 				height: 49.7rem;
-				background: #383431;
-				border-radius: 999rem;
+				border-bottom: 1rem solid var(--line);
 				display: flex;
 				align-items: center;
 			}
 			.numrow .no {
 				font-family: "Plus Jakarta Sans", sans-serif;
-				font-weight: 600;
-				font-size: 10rem;
+				font-weight: 500;
+				font-size: 20rem;
 				line-height: 1;
-				padding: 5rem 12rem;
-				border-radius: 999rem;
-				margin-left: 21rem;
+				color: #5c5c5c;
+				width: 46rem;
+				flex-shrink: 0;
 			}
 			.numrow .txt {
 				font-family: "Plus Jakarta Sans", sans-serif;
 				font-weight: 500;
-				font-size: 18rem;
+				font-size: 17rem;
 				color: var(--cream);
-				margin-left: 20rem;
 			}
 
 			/* rule rows (slides 10, 17) */
@@ -303,13 +291,15 @@
 				position: absolute;
 				left: 18rem;
 				width: 684rem;
-				background: #383431;
-				border-radius: 14rem;
+				background: transparent;
+				border: 1rem solid var(--line);
+				border-radius: 6rem;
 				display: flex;
 				align-items: center;
 			}
 			.rulerow.hl {
-				background: var(--darkred);
+				background: #161616;
+				border-color: rgba(255, 255, 255, 0.22);
 			}
 			.rulerow .no {
 				font-family: "Plus Jakarta Sans", sans-serif;
@@ -322,7 +312,9 @@
 			.rulerow .spark {
 				margin-left: auto;
 				margin-right: 24rem;
-				font-size: 18rem;
+				width: 6rem;
+				height: 6rem;
+				background: #f2f2f2;
 			}
 
 			/* deck chrome (screen px, not stage units) */
@@ -353,7 +345,7 @@
 				cursor: pointer;
 			}
 			.deck-nav button:hover {
-				background: var(--coral);
+				background: #2c2c2c;
 			}
 			.deck-nav .counter {
 				color: var(--muted);
@@ -367,12 +359,12 @@
 
 		<!-- 1 · title -->
 		<section class="frame">
-			<div class="slide" style="background: var(--darkred)">
-				<div class="abs" style="left: 20rem; top: 20rem; right: 20rem; bottom: 20rem; background: #f4665c; border-radius: 24rem"></div>
-				<h1 class="abs" style="left: 46.5rem; top: 131.7rem; width: 630rem; font-size: 45rem; line-height: 54rem; color: #7a1212">
+			<div class="slide">
+				<h1 class="abs" style="left: 46.5rem; top: 121.7rem; width: 630rem; font-size: 44rem; line-height: 54rem; font-weight: 500; color: var(--cream)">
 					my indie-hacking journey to building a $1M SaaS portfolio (fully bootstrapped)
 				</h1>
-				<p class="abs pjs" style="left: 46.5rem; top: 314rem; font-size: 18rem; color: #7a1212">
+				<div class="abs" style="left: 46.5rem; top: 306rem; width: 42rem; height: 1.4rem; background: #f2f2f2"></div>
+				<p class="abs pjs" style="left: 46.5rem; top: 320rem; font-size: 15rem; color: var(--muted)">
 					lessons from 13 startups, failures, and scaling to profitability.
 				</p>
 			</div>
@@ -383,17 +375,17 @@
 			<div class="slide">
 				<h2 class="abs pink" style="left: 30rem; top: 26.6rem; font-size: 32rem; line-height: 38.4rem">12 startups since 2020</h2>
 				<div class="scard" style="left: 30rem; top: 74rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/mrktdb.jpg" alt="MrktDB" />
 						<span class="sdate">Jun 2020</span>
 						<div class="sbar"><span class="name">MrktDB</span><span class="status shutdown">Shut down</span></div>
 					</div>
 					<div class="sbody">
-						<p class="desc">SEC 13F filing aggregator to surface hedge-fund holdings and trends via interactive charts.</p>
+						<p class="desc">US SEC 13F filing aggregator to surface hedge-fund holdings and trends via interactive charts.</p>
 					</div>
 				</div>
 				<div class="scard" style="left: 260rem; top: 74rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/musixverse.jpg" alt="Musixverse" />
 						<span class="sdate">Oct 2021</span>
 						<div class="sbar"><span class="name">Musixverse</span><span class="status shutdown">Shut down</span></div>
@@ -403,17 +395,17 @@
 					</div>
 				</div>
 				<div class="scard" style="left: 490rem; top: 74rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/get-into-web3.jpg" alt="Get Into Web3" />
 						<span class="sdate">Nov 2021</span>
 						<div class="sbar"><span class="name">Get Into Web3</span><span class="status shutdown">Shut down</span></div>
 					</div>
 					<div class="sbody">
-						<p class="desc">Crypto education platform teaching blockchain concepts via blogs, video, and community.</p>
+						<p class="desc">Blockchain and crypto education platform teaching blockchain concepts via blogs, video, and community.</p>
 					</div>
 				</div>
 				<div class="scard" style="left: 30rem; top: 232rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/idea2business.jpg" alt="Idea2Business" />
 						<span class="sdate">May 2023</span>
 						<div class="sbar"><span class="name">Idea2Business</span><span class="status shutdown">Shut down</span></div>
@@ -423,7 +415,7 @@
 					</div>
 				</div>
 				<div class="scard" style="left: 260rem; top: 232rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/slick.jpg" alt="Slick" />
 						<span class="sdate">Oct 2023</span>
 						<div class="sbar"><span class="name">Slick</span><span class="status mixed">Profitable / Shut Down</span></div>
@@ -433,7 +425,7 @@
 					</div>
 				</div>
 				<div class="scard" style="left: 490rem; top: 232rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/faceless.jpg" alt="Faceless" />
 						<span class="sdate">Sep 2024</span>
 						<div class="sbar"><span class="name">Faceless</span><span class="status profitable">Profitable</span></div>
@@ -447,19 +439,19 @@
 		<!-- 3 · 13 startups (part 2) -->
 		<section class="frame">
 			<div class="slide">
-				<h2 class="abs pink" style="left: 18rem; top: 16.8rem; font-size: 36rem; line-height: 43.2rem">12 startups since 2020</h2>
+				<h2 class="abs pink" style="left: 18rem; top: 19rem; font-size: 36rem; line-height: 43.2rem">12 startups since 2020</h2>
 				<div class="scard" style="left: 18rem; top: 70rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/festify.jpg" alt="Festify" />
 						<span class="sdate">May 2025</span>
 						<div class="sbar"><span class="name">Festify</span><span class="status active">Active</span></div>
 					</div>
 					<div class="sbody">
-						<p class="desc">Leading tech partner managing web systems and smart badge APIs for global tech summits.</p>
+						<p class="desc">Leading tech partner managing web systems and smart badge APIs for global tech summits like TOKEN2049.</p>
 					</div>
 				</div>
 				<div class="scard" style="left: 260rem; top: 70rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/sitfit.jpg" alt="SitFit" />
 						<span class="sdate">Oct 2025</span>
 						<div class="sbar"><span class="name">SitFit</span><span class="status shutdown">Shut down</span></div>
@@ -469,27 +461,27 @@
 					</div>
 				</div>
 				<div class="scard" style="left: 502rem; top: 70rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/locus.jpg" alt="Locus" />
 						<span class="sdate">Nov 2025</span>
 						<div class="sbar"><span class="name">Locus</span><span class="status active">Active</span></div>
 					</div>
 					<div class="sbody">
-						<p class="desc">Corporate logistics hub partnering with events to provide automated travel desk utilities.</p>
+						<p class="desc">Managing business travel spend end to end with an automated receipt engine.</p>
 					</div>
 				</div>
 				<div class="scard" style="left: 260rem; top: 228rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/viraloop.jpg" alt="Viraloop" />
 						<span class="sdate">Jan 2026</span>
 						<div class="sbar"><span class="name">Viraloop</span><span class="status active">Active</span></div>
 					</div>
 					<div class="sbody">
-						<p class="desc">AI automation converting URLs into automated, loopable marketing videos across TikTok.</p>
+						<p class="desc">Automating social media content across TikTok, Instagram, YouTube to get businesses more customers.</p>
 					</div>
 				</div>
 				<div class="scard" style="left: 18rem; top: 228rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/carve.jpg" alt="Carve" />
 						<span class="sdate">Apr 2026</span>
 						<div class="sbar"><span class="name">Carve</span><span class="status mixed">Profitable / Shut Down</span></div>
@@ -499,7 +491,7 @@
 					</div>
 				</div>
 				<div class="scard" style="left: 502rem; top: 228rem; width: 200rem; height: 150rem">
-					<div class="sbanner" style="height: 103rem">
+					<div class="sbanner" style="height: 112rem">
 						<img src="../assets/talks/indie-hacking/thumbs/onealbum.jpg" alt="OneAlbum" />
 						<span class="sdate">May 2026</span>
 						<div class="sbar"><span class="name">OneAlbum</span><span class="status active">Active</span></div>
@@ -513,7 +505,6 @@
 		<!-- 4 · dream vs reality -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag dark" style="left: 25rem; top: 18rem">saas analysis</span>
 				<h2 class="abs pink" style="left: 18rem; top: 45.6rem; font-size: 30.6rem; line-height: 36.7rem">the dream vs. the realities of saas</h2>
 				<div class="abs card" style="left: 18rem; top: 100rem; width: 330rem; height: 287rem; padding: 15rem"></div>
 				<div class="abs card" style="left: 372rem; top: 100rem; width: 330rem; height: 287rem; padding: 15rem"></div>
@@ -521,10 +512,10 @@
 				<span class="abs tag coral" style="left: 395rem; top: 116rem">the reality</span>
 				<h3 class="abs yellow" style="left: 33rem; top: 148.5rem; font-size: 18rem">expecting easy scale</h3>
 				<h3 class="abs coral" style="left: 387rem; top: 148.5rem; font-size: 18rem">facing brutal truths</h3>
-				<p class="abs yellow sb" style="left: 33rem; top: 182rem; width: 290rem; font-size: 12rem; line-height: 14.4rem">
+				<p class="abs muted sb" style="left: 33rem; top: 182rem; width: 290rem; font-size: 12rem; line-height: 14.4rem">
 					the allure of building software is the promise of automated scale and compounding revenue.
 				</p>
-				<p class="abs sb" style="left: 387rem; top: 182rem; width: 280rem; font-size: 12rem; line-height: 14.4rem; color: #f28b83">
+				<p class="abs sb" style="left: 387rem; top: 182rem; width: 280rem; font-size: 12rem; line-height: 14.4rem; color: var(--muted)">
 					the real world demands constant fighting for attention and relentless survival.
 				</p>
 				<ul class="abs" style="left: 33rem; top: 224rem; width: 300rem">
@@ -561,22 +552,22 @@
 
 		<!-- 6 · why musixverse failed -->
 		<section class="frame">
-			<div class="slide" style="background: var(--maroon)">
+			<div class="slide">
 				<h2 class="abs pink" style="left: 60rem; top: 42.1rem; font-size: 36rem; line-height: 43.2rem">why musixverse failed</h2>
-				<div class="numrow" style="top: 124.3rem">
-					<span class="no" style="background: var(--yellow); color: #3a2c00">01</span>
+				<div class="numrow" style="top: 112rem">
+					<span class="no">01</span>
 					<span class="txt">wrong business model for the market</span>
 				</div>
-				<div class="numrow" style="top: 199.3rem">
-					<span class="no" style="background: var(--coral); color: #fff">02</span>
+				<div class="numrow" style="top: 184rem">
+					<span class="no">02</span>
 					<span class="txt">zero external funding to sustain a large team</span>
 				</div>
-				<div class="numrow" style="top: 274.3rem">
-					<span class="no" style="background: var(--peach); color: #5c1a14">03</span>
+				<div class="numrow" style="top: 256rem">
+					<span class="no">03</span>
 					<span class="txt">high web3 friction for everyday users</span>
 				</div>
-				<div class="numrow" style="top: 343.6rem">
-					<span class="no" style="background: var(--yellow); color: #3a2c00">04</span>
+				<div class="numrow" style="top: 328rem">
+					<span class="no">04</span>
 					<span class="txt">took too long to ship and do market validation</span>
 				</div>
 			</div>
@@ -610,11 +601,11 @@
 				<h2 class="abs pink" style="left: 36rem; top: 61.1rem; width: 300rem; font-size: 30.6rem; line-height: 36.7rem">
 					embracing zero-budget saas validation
 				</h2>
-				<span class="abs b" style="left: 36rem; top: 196.5rem; font-size: 9rem; background: #b8332a; color: var(--cream); padding: 1.5rem 3rem">mindset shift</span>
+				<span class="abs tag" style="left: 36rem; top: 196.5rem">mindset shift</span>
 				<p class="abs" style="left: 36rem; top: 222.5rem; font-size: 11rem">from building in secret to validating openly</p>
-				<span class="abs b" style="left: 36rem; top: 248.9rem; font-size: 9rem; background: #b8332a; color: var(--cream); padding: 1.5rem 3rem">core rule</span>
+				<span class="abs tag" style="left: 36rem; top: 248.9rem">core rule</span>
 				<p class="abs" style="left: 36rem; top: 274.9rem; font-size: 11rem">never spend money before proving demand</p>
-				<span class="abs b" style="left: 36rem; top: 301.4rem; font-size: 9rem; background: var(--yellow); color: #3a2c00; padding: 1.5rem 3rem">goal</span>
+				<span class="abs tag" style="left: 36rem; top: 301.4rem">goal</span>
 				<p class="abs" style="left: 36rem; top: 312.9rem; font-size: 11rem">mitigate risk early</p>
 				<img class="photo" src="../assets/talks/indie-hacking/phone-validation.jpg" alt="Phone showing an email subscribe landing page next to a notebook" style="left: 392rem; top: 68rem; width: 266rem; height: 270rem" />
 			</div>
@@ -623,22 +614,21 @@
 		<!-- 10 · validation rules -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag red" style="left: 23rem; top: 18rem">validation</span>
 				<h2 class="abs pink" style="left: 18rem; top: 48.6rem; font-size: 28rem; line-height: 35.3rem">rules for fast, zero-budget validation</h2>
 				<div class="rulerow hl" style="top: 110rem; height: 63rem">
-					<span class="no yellow">rule 1</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 01</span>
 					<span style="font-size: 18rem; color: var(--cream)">build a landing page first</span>
-					<span class="spark yellow">&#10022;</span>
+					<span class="spark"></span>
 				</div>
 				<div class="rulerow" style="top: 192.5rem; height: 63rem">
-					<span class="no yellow">rule 2</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 02</span>
 					<span style="font-size: 18rem; color: var(--cream)">collect emails before writing code</span>
-					<span class="spark coral">&#10022;</span>
+					<span class="spark"></span>
 				</div>
 				<div class="rulerow" style="top: 275rem; height: 63rem">
-					<span class="no coral">rule 3</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 03</span>
 					<span style="font-size: 18rem; color: var(--cream)">talk directly to potential users</span>
-					<span class="spark peach">&#9678;</span>
+					<span class="spark"></span>
 				</div>
 			</div>
 		</section>
@@ -646,7 +636,6 @@
 		<!-- 11 · fatal product flaws -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag darkred" style="left: 18rem; top: 21rem">post-mortem part 1</span>
 				<h2 class="abs yellow" style="left: 18rem; top: 44.9rem; font-size: 30rem; line-height: 37.8rem">fatal product flaws</h2>
 				<div class="abs card" style="left: 18rem; top: 112rem; width: 330rem; height: 270rem"></div>
 				<div class="abs card" style="left: 372rem; top: 112rem; width: 330rem; height: 270rem"></div>
@@ -669,7 +658,6 @@
 		<!-- 12 · marketing failures -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag darkred" style="left: 18rem; top: 17.2rem">post-mortem part 2</span>
 				<h2 class="abs pink" style="left: 18rem; top: 42.3rem; font-size: 30.6rem; line-height: 36.7rem">marketing failures</h2>
 				<div class="abs card" style="left: 18rem; top: 100rem; width: 330rem; height: 287rem"></div>
 				<div class="abs card" style="left: 372rem; top: 100rem; width: 330rem; height: 287rem"></div>
@@ -720,7 +708,6 @@
 		<!-- 13b · faceless.so numbers -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag dark" style="left: 18rem; top: 18rem">last 28 days &middot; datafast + google search console</span>
 				<h2 class="abs yellow" style="left: 18rem; top: 45.6rem; font-size: 32rem; line-height: 38.4rem">faceless.so: last month in numbers</h2>
 				<div class="abs card" style="left: 18rem; top: 120rem; width: 160rem; height: 170rem"></div>
 				<div class="abs card" style="left: 190.5rem; top: 120rem; width: 160rem; height: 170rem"></div>
@@ -764,7 +751,6 @@
 		<!-- 15 · multi-saas portfolio -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag coral" style="left: 30rem; top: 33rem">active products: 4+</span>
 				<h2 class="abs pink" style="left: 30rem; top: 61.1rem; width: 310rem; font-size: 30.6rem; line-height: 36.7rem">
 					managing a multi-saas portfolio
 				</h2>
@@ -802,19 +788,19 @@
 			<div class="slide">
 				<h2 class="abs pink" style="left: 18rem; top: 27.1rem; font-size: 36rem; line-height: 43.2rem">the indie-hacker's golden rules</h2>
 				<div class="rulerow hl" style="top: 103.5rem; height: 63rem">
-					<span class="no coral">rule 1</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 01</span>
 					<span style="font-size: 12rem; color: var(--cream)">distribution is more important than code</span>
-					<span class="spark yellow">&#10022;</span>
+					<span class="spark"></span>
 				</div>
 				<div class="rulerow" style="top: 178.5rem; height: 63rem">
-					<span class="no yellow">rule 2</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 02</span>
 					<span style="font-size: 12rem; color: var(--cream)">kill failing projects quickly</span>
-					<span class="spark coral">&#10022;</span>
+					<span class="spark"></span>
 				</div>
 				<div class="rulerow" style="top: 253.5rem; height: 63rem">
-					<span class="no peach">rule 3</span>
+					<span class="no" style="font-size: 9rem; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f">rule 03</span>
 					<span style="font-size: 12rem; color: var(--cream)">double down on what works immediately</span>
-					<span class="spark peach">&#9678;</span>
+					<span class="spark"></span>
 				</div>
 			</div>
 		</section>
@@ -822,13 +808,12 @@
 		<!-- 18 · choosing your path -->
 		<section class="frame">
 			<div class="slide">
-				<span class="abs tag coral" style="left: 18rem; top: 17.2rem">models</span>
 				<h2 class="abs" style="left: 18rem; top: 39.6rem; font-size: 26rem; line-height: 32.8rem; color: var(--cream)">
 					choosing your path: life goals &amp; business models
 				</h2>
 				<div class="abs card" style="left: 18rem; top: 100rem; width: 222rem; height: 265rem"></div>
 				<div class="abs card" style="left: 252rem; top: 100rem; width: 222rem; height: 265rem"></div>
-				<div class="abs" style="left: 486rem; top: 100rem; width: 222rem; height: 265rem; border: 1.5rem solid var(--coral); border-radius: 12rem"></div>
+				<div class="abs" style="left: 486rem; top: 100rem; width: 222rem; height: 265rem; border: 1rem solid rgba(255, 255, 255, 0.3); border-radius: 6rem"></div>
 				<h3 class="abs yellow sb" style="left: 33rem; top: 108.9rem; font-size: 13rem">the vc-backed path</h3>
 				<h3 class="abs pink sb" style="left: 267rem; top: 108.9rem; font-size: 13rem">the bootstrapped/indie path</h3>
 				<h3 class="abs coral sb" style="left: 501rem; top: 108.9rem; font-size: 13rem">self-reflection</h3>
@@ -852,19 +837,19 @@
 
 		<!-- 19 · closing -->
 		<section class="frame">
-			<div class="slide" style="background: #f9a8a0; text-align: center">
-				<h2 class="abs" style="left: 0; top: 33.7rem; width: 720rem; font-size: 32rem; line-height: 45.9rem; color: #8f1414">
-					stop overthinking and<br /><mark style="background: var(--cream); color: #8f1414; padding: 0 6rem">start building</mark>
+			<div class="slide" style="text-align: center">
+				<h2 class="abs" style="left: 0; top: 33.7rem; width: 720rem; font-size: 32rem; line-height: 45.9rem; color: var(--cream)">
+					stop overthinking and<br /><mark style="background: none; color: var(--cream); border-bottom: 2rem solid #f2f2f2; padding: 0 2rem">start building</mark>
 				</h2>
-				<div class="abs" style="left: 63.8rem; top: 150rem; width: 285rem; height: 110rem; background: var(--cream); border-radius: 20rem; text-align: left; padding: 15rem">
-					<span class="tag coral" style="margin-top: 3rem">action 01</span>
-					<p style="color: #2b2320; font-size: 13.4rem; line-height: 20.5rem; margin-top: 8rem">build directly for<br />the market's needs</p>
+				<div class="abs card" style="left: 63.8rem; top: 150rem; width: 285rem; height: 110rem; text-align: left; padding: 15rem">
+					<span class="tag" style="margin-top: 3rem">action 01</span>
+					<p style="color: var(--text); font-size: 13.4rem; line-height: 20.5rem; margin-top: 8rem">build directly for<br />the market's needs</p>
 				</div>
-				<div class="abs" style="left: 378.8rem; top: 150rem; width: 285rem; height: 110rem; background: var(--cream); border-radius: 20rem; text-align: left; padding: 15rem">
-					<span class="tag coral" style="margin-top: 3rem">action 02</span>
-					<p style="color: #2b2320; font-size: 13.4rem; line-height: 20.5rem; margin-top: 8rem">launch your mvp<br />this week</p>
+				<div class="abs card" style="left: 378.8rem; top: 150rem; width: 285rem; height: 110rem; text-align: left; padding: 15rem">
+					<span class="tag" style="margin-top: 3rem">action 02</span>
+					<p style="color: var(--text); font-size: 13.4rem; line-height: 20.5rem; margin-top: 8rem">launch your mvp<br />this week</p>
 				</div>
-				<div class="abs pjs sb" style="left: 180rem; top: 285rem; width: 360rem; height: 38rem; background: #8f0e0e; color: var(--yellow); border-radius: 999rem; font-size: 15rem; line-height: 38rem">
+				<div class="abs pjs sb" style="left: 180rem; top: 285rem; width: 360rem; height: 38rem; border: 1rem solid rgba(255, 255, 255, 0.35); color: var(--cream); border-radius: 999rem; font-size: 14rem; line-height: 38rem; letter-spacing: 0.06em">
 					goal: sail your way to $1m
 				</div>
 			</div>
